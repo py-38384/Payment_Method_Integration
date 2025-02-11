@@ -78,7 +78,7 @@ $onhold_order_details_id = $payment_response_array[0]->value1;
 
 make sure to update your transaction_track table in every step of the process
 
-**In The JsonResponse From verifyPayment() Function. Grab The 0th Element, If The Payment Was Success sp_code will be 1000 and sp_message will be Success **
+**In The JsonResponse From verifyPayment() Function. Grab The 0th Element, If The Payment Was Success sp_code will be 1000 and sp_message will be Success**
 
 ```
 $payment_response_array[0]->sp_code == "1000" &&  $payment_response_array[0]->sp_message == "Success"
