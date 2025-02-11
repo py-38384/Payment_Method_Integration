@@ -73,6 +73,7 @@ $env = new ShurjopayEnvReader(base_path('.env'));
 $sp_instance = new Shurjopay($env->getConfig());
 
 $payment_response_array = $sp_instance->verifyPayment($order_id);
+$onhold_order_details_id = $payment_response_array[0]->value1;
 ```
 
 make sure to update your transaction_track table in every stage of the process
