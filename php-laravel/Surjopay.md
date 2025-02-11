@@ -56,6 +56,8 @@ $request->value1 = $onhold_order_details->id;
 $sp_instance->makePayment($request);
 ```
 
+Tip. You Can Pass Any String Data In The value1, value2, value3 And value4. You Will get Your Data Back From The Response Of verifyPayment() function
+
 **PaymentRequest() And ShurjopayEnvReader() Should Come From SurjoPay Plugin Package**
 
 ```
@@ -75,7 +77,7 @@ $payment_response_array = $sp_instance->verifyPayment($order_id);
 
 make sure to update your transaction_track table in every stage of the process
 
-**In The JsonResponse From verifyPayment() Function. Grab The [0]th Element, If The Payment Was Success sp_code will be "1000" and sp_message will be "Success" **
+**In The JsonResponse From verifyPayment() Function. Grab The [0]th Element, If The Payment Was Success sp_code will be 1000 and sp_message will be Success **
 
 ```
 $payment_response_array[0]->sp_code == "1000" &&  $payment_response_array[0]->sp_message == "Success"
