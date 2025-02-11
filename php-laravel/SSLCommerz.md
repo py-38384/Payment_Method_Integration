@@ -20,6 +20,6 @@
    ```
 7. You can Initiate A Payment Sequence By Calling The index Function Of SslCommerzPaymentController.php Controller. Make A Route Of Post Method And Connect The Function To The Route
 8. Then Customize The Index Function To Add Real Info About The Transaction
-9. In The config/sslcommerz.php File Grab The success, failed, cancel and ipn url From .Env File Instead of HardCode Url
+9. In The config/sslcommerz.php File Grab The success, failed, cancel and ipn url From .env File Instead of HardCode Url
 10. Now In The SslCommerzPaymentController.php File Change And Add Your Bussness Logic To The success fail cancel and ipn function
 11. In Case Of Production make SSLCZ_TESTMODE="false" And Put Live Details In The SslCommerz Credentials Variable in the .env File
